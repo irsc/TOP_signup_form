@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "norse";
+    src: url(../fonts/Norse-Bold.otf);
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.flex-wrapper{
+    display: flex;
+}
+
+.company-name{
+    background-image: url(../img/background_image.jpg);
+    background-size: cover;
+    height:  100vh;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+} 
+
+.banner{
+    background-color:rgba(19, 17, 17, 0.5);
+    padding: 0.15em;
+    font-family: "norse";
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    top: 2em;
+}
+
+
+.banner img{
+    height: 1.5em;
+
+}
+.banner span{
+    margin-left: 6px;
+    margin-top: 20px;
+}
+
+.credits{
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: 0.5em;
+}
+
+.white{
+    color:snow;
+    opacity: 100%;
+}
+
+.message{
+    padding: 100px;
+}
