@@ -29,32 +29,66 @@
               
         </section>
 
-        <section>
+        <section class="content">
             <div class="message">
                 <p>This is not a real online service! You know you need something like this in your life
-                    to helo you realize your deepest dreams.
+                    to help you realize your deepest dreams.
                     <br>
                     Sign up <em>now</em> to get started.
                 </p>
                 <p>You <em>know</em> you want to.</p>
             </div>
-            <div>
-                <form action="" method="post">
+            <div class="form">
+                <form action="" method="get" id="newaccount">
                     <h2>Let's do this!</h2>
-                    <label for=""></label><input type="text"><span></span>
-                    <label for=""></label><input type="text"><span></span>
-                    <label for=""></label><input type="text"><span></span>
-                    <label for=""></label><input type="text"><span></span>
-                    <label for=""></label><input type="text"><span></span>
-                    <label for=""></label><input type="text"><span></span>
 
+                    <fieldset class="fieldset"> 
+                        <div class="field">
+                            <label for="fname">First Name</label>
+                            <input id="fname" type="text" pattern="[a-zA-Z]{2,20}" required>
+                            <span></span>
+                        </div>
+                        
+                        <div class="field">
+                            <label for="lname">Last Name</label>
+                            <input id="lname" type="text" pattern="[a-zA-Z]{2,20}" required>
+                            <span></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" required>
+                            <span></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="tel" required>
+                            <span></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="password">Password</label>
+                            <input id="password" type="password" required>
+                            <span></span>
+                        </div>
+
+                        <div class="field">
+                            <label for="confirm">Confirm password</label>
+                            <input id="confirm" type="password" required>
+                            <span></span>
+                        </div>
+                        
+                        
+                    </fieldset>
+                
                 </form>
             </div>
-            <div>
-                <p>
-                    <button type="submit">Create Account</button>
-                </p>
-                <p>Already have an account? <a href="#">Log in</a></p>
+            <div class="submit">
+                <button type="submit" form="newaccount" value="account" class="white">
+                    Create Account
+                </button>
+                <p class="login-text">Already have an account? <a href="#" class="green bold-text">Log in</a></p>
             </div>
         </section>
     </div>
