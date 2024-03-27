@@ -9,89 +9,91 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
-
-    <div class="flex-wrapper">
-        <section class="company-name">
-            <!-- <img src="./background_image.jpg" alt="image of leaves" class="bg-image"> -->
-            <!-- <div class="banner-wrapper"> -->
-                <div class="banner">
-                    <img src="./img/odin-lined.png" alt="">
-                    <span class="white">ODIN</span>
-                    
-                </div>
-
-                <div class="credits">
-                    <p class="white">Photo by <a href="https://unsplash.com/es/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/es/fotos/planta-de-hoja-verde-en-fotografia-de-primer-plano-25xggax4bSA">Unsplash</a></p>
-                </div>
-
-           <!--  </div> -->
-              
-        </section>
-
-        <section class="content">
-            <div class="message">
-                <p>This is not a real online service! You know you need something like this in your life
-                    to help you realize your deepest dreams.
-                    <br>
-                    Sign up <em>now</em> to get started.
-                </p>
-                <p>You <em>know</em> you want to.</p>
-            </div>
-            <div class="form">
-                <form action="" method="get" id="newaccount">
-                    <h2>Let's do this!</h2>
-
-                    <fieldset class="fieldset"> 
-                        <div class="field">
-                            <label for="fname">First Name</label>
-                            <input id="fname" type="text" pattern="[a-zA-Z]{2,20}" required>
-                            <span></span>
-                        </div>
-                        
-                        <div class="field">
-                            <label for="lname">Last Name</label>
-                            <input id="lname" type="text" pattern="[a-zA-Z]{2,20}" required>
-                            <span></span>
-                        </div>
-
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input id="email" type="email" required>
-                            <span></span>
-                        </div>
-
-                        <div class="field">
-                            <label for="phone">Phone Number</label>
-                            <input id="phone" type="tel" required>
-                            <span></span>
-                        </div>
-
-                        <div class="field">
-                            <label for="password">Password</label>
-                            <input id="password" type="password" required>
-                            <span></span>
-                        </div>
-
-                        <div class="field">
-                            <label for="confirm">Confirm password</label>
-                            <input id="confirm" type="password" required>
-                            <span></span>
-                        </div>
-                        
-                        
-                    </fieldset>
+<body class="flex-wrapper">
+    <section class="company-name">
+        <!-- <img src="./background_image.jpg" alt="image of leaves" class="bg-image"> -->
+        <!-- <div class="banner-wrapper"> -->
+            <div class="banner">
+                <img src="./img/odin-lined.png" alt="">
+                <span class="white">ODIN</span>
                 
-                </form>
             </div>
-            <div class="submit">
-                <button type="submit" form="newaccount" value="account" class="white">
-                    Create Account
-                </button>
-                <p class="login-text">Already have an account? <a href="#" class="green bold-text">Log in</a></p>
+
+            <div class="credits">
+                <p class="white">Photo by <a href="https://unsplash.com/es/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/es/fotos/planta-de-hoja-verde-en-fotografia-de-primer-plano-25xggax4bSA">Unsplash</a></p>
             </div>
-        </section>
-    </div>
+
+        <!--  </div> -->
+            
+    </section>
+
+    <section class="content">
+        <div class="message">
+            <p>This is not a real online service! You know you need something like this in your life
+                to help you realize your deepest dreams.
+                <br>
+                Sign up <em>now</em> to get started.
+            </p>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+        <div class="form">
+            <form action="magig.php" method="post" id="newaccount">
+                <h2>Let's do this!</h2>
+
+                <fieldset class="fieldset"> 
+                    <div class="field">
+                        <label for="fname">First Name</label>
+                        <input id="fname" type="text" pattern="[a-zA-Z]{2,20}" required>
+                        <span></span>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="lname">Last Name</label>
+                        <input id="lname" type="text" pattern="[a-zA-Z]{2,20}" required>
+                        <span></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" required>
+                        <span></span>
+                    </div>
+
+                    <div class="field">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" type="tel" required>
+                        <span></span>
+                    </div>
+
+                    <div class="field">
+                        <label class="tooltip" for="password">Password
+                            <span class="tooltiptext">Password shall be at least 8 characters long</span>
+                        </label>
+                        <input id="password" type="password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                        <span id="passwordSpan">
+                            Passwords do not match
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <label for="confirm">Confirm password</label>
+                        <input id="confirm" type="password" required pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$">
+                        <span></span>
+                    </div>
+                    
+                </fieldset>
+            
+            </form>
+        </div>
+        <div class="submit">
+            <button id="createAccount" type="submit" form="newaccount" value="newaccount" class="white">
+                Create Account
+            </button>
+            <p class="login-text">Already have an account? <a href="#" class="green bold-text">Log in</a></p>
+        </div>
+    </section>
+
+    <script src="./js/password_validation.js"></script>
     
 </body>
 </html>
